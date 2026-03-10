@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arnab Kr Kashyap | Creative Portfolio</title>
+    <meta name="description" content="Professional portfolio of Arnab Kashyap - Creative Developer and Designer.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="gradient-text">AK</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-background">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                <div class="orb orb-3"></div>
+            </div>
+            <div class="container hero-content">
+                <h2 class="reveal-text">Hello, I'm</h2>
+                <h1 class="reveal-text delay-1">Arnab <span class="gradient-text">Kashyap</span></h1>
+                <p class="reveal-text delay-2">Crafting digital experiences through elegant code and modern design.</p>
+                <div class="hero-btns reveal-text delay-3">
+                    <a href="#projects" class="btn primary-btn">View My Work</a>
+                    <a href="#contact" class="btn secondary-btn">Let's Talk</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+                <span>Scroll Down</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <span class="subtitle">Discovery</span>
+                    <h2>About Me</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text animate-up">
+                        <p>I am a passionate developer with a keen eye for detail and a drive for creating intuitive,
+                            performant web applications. My journey in tech is fueled by curiosity and a desire to solve
+                            complex problems through creative solutions.</p>
+                        <p>With expertise across the full stack, I bridge the gap between aesthetics and functionality,
+                            ensuring every project not only looks stunning but performs flawlessly.</p>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <span class="stat-num">5+</span>
+                                <span class="stat-label">Projects</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num">2+</span>
+                                <span class="stat-label">Years Exp</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image animate-up delay-1">
+                        <div class="image-wrapper">
+                            <img src="assets/profile.png" alt="Arnab Kashyap" id="profile-img">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section-padding">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="subtitle">Expertise</span>
+                    <h2>My Tech Stack</h2>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-card animate-up">
+                        <i class="fab fa-html5"></i>
+                        <h3>Frontend</h3>
+                        <p>HTML5, CSS3, JavaScript, React</p>
+                    </div>
+                    <div class="skill-card animate-up delay-1">
+                        <i class="fab fa-node-js"></i>
+                        <h3>Backend</h3>
+                        <p>Node.js, Express, MongoDB, SQL</p>
+                    </div>
+                    <div class="skill-card animate-up delay-2">
+                        <i class="fas fa-palette"></i>
+                        <h3>Design</h3>
+                        <p>UI/UX, Figma, Adobe XD</p>
+                    </div>
+                    <div class="skill-card animate-up delay-3">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tools</h3>
+                        <p>Git, Docker, Firebase, AWS</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <span class="subtitle">Portfolio</span>
+                    <h2>Featured Projects</h2>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card animate-up">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
+                                alt="Project 1">
+                            <div class="project-links">
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Quantum Dashboard</h3>
+                            <p>A sophisticated data visualization platform built with React and D3.js.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>D3.js</span>
+                                <span>Sass</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card animate-up delay-1">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop"
+                                alt="Project 2">
+                            <div class="project-links">
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>EcoStream App</h3>
+                            <p>Mobile-first sustainable living tracker with community features.</p>
+                            <div class="project-tags">
+                                <span>React Native</span>
+                                <span>Node.js</span>
+                                <span>Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="subtitle">Connection</span>
+                    <h2>Get In Touch</h2>
+                </div>
+                <div class="contact-wrapper">
+                    <div class="contact-info animate-up">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>hello@arnabkashyap.dev</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-location-dot"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>India</p>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form animate-up delay-1" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn btn-block">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Arnab Kashyap. All rights reserved.</p>
+            <p class="footer-note">Designed with ❤️ and Code</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
