@@ -233,10 +233,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // ── Typewriter Effect ────────────────────────────────────
     const typedText = document.getElementById('typedText');
     const roles = [
-        'Full Stack Dev',
+        'Software Developer',
         'Hackathon Builder',
         'Problem Solver',
-        'Open to Work'
+        'AI Enthusiast'
     ];
 
     let roleIndex = 0;
