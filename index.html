@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arnab Kr Kashyap | Creative Portfolio</title>
-    <meta name="description" content="Professional portfolio of Arnab Kashyap - Creative Developer and Designer.">
+    <title>Arnab Kr Kashyap | Software Developer</title>
+    <meta name="description" content="Portfolio of Arnab Kashyap — Full Stack Developer specializing in modern web applications, UI/UX design, and creative coding. Open to internships and full-time roles.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,38 +14,101 @@
         rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=cinematic">
 </head>
 
 <body>
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
 
-    <nav id="navbar">
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="navbar">
         <div class="nav-container">
-            <div class="logo">
-                <span class="gradient-text">AK</span>
+            <!-- Brand Logo -->
+            <a href="#home" class="nav-logo" aria-label="Arnab Kashyap Home">
+                <span class="logo-mark gradient-text">AK</span>
+                <span class="logo-divider"></span>
+                <span class="logo-subtext">Portfolio</span>
+            </a>
+
+            <!-- Desktop Center Capsule Navigation -->
+            <div class="nav-center">
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#team-projects">Collaboration</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="nav-socials">
-                <a href="https://github.com/arnabkashyap" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/arnab-kashyap-3a0bb9363" target="_blank"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/arnabkashyapp" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+
+            <!-- Right Action Zone: Socials, Desktop CTA, Mobile Toggle -->
+            <div class="nav-actions">
+                <div class="nav-socials">
+                    <a href="https://github.com/arnabkashyap" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/arnab-kashyap-3a0bb936" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/arnabkashyapp" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+
+                <a href="#contact" class="nav-cta-btn" aria-label="Contact Arnab">
+                    <span class="cta-pulse-dot"></span>
+                    <span>Let's Talk</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+                <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Navigation Drawer / Overlay -->
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+        <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+        <div class="mobile-nav-panel">
+            <div class="mobile-nav-header">
+                <a href="#home" class="mobile-logo mobile-link">
+                    <span class="logo-mark gradient-text">AK</span>
+                    <span class="logo-subtext">Portfolio</span>
+                </a>
+                <button type="button" class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <ul class="mobile-nav-links">
+                <li><a href="#home" class="mobile-link active"><span class="link-idx">01</span><span class="link-title">Home</span></a></li>
+                <li><a href="#projects" class="mobile-link"><span class="link-idx">02</span><span class="link-title">Projects</span></a></li>
+                <li><a href="#skills" class="mobile-link"><span class="link-idx">03</span><span class="link-title">Skills</span></a></li>
+                <li><a href="#achievements" class="mobile-link"><span class="link-idx">04</span><span class="link-title">Achievements</span></a></li>
+                <li><a href="#team-projects" class="mobile-link"><span class="link-idx">05</span><span class="link-title">Collaboration</span></a></li>
+                <li><a href="#about" class="mobile-link"><span class="link-idx">06</span><span class="link-title">About</span></a></li>
+                <li><a href="#contact" class="mobile-link"><span class="link-idx">07</span><span class="link-title">Contact</span></a></li>
+            </ul>
+
+            <div class="mobile-nav-bottom">
+                <a href="#contact" class="btn primary-btn mobile-cta-btn mobile-link">
+                    <span>Let's Talk</span>
+                    <i class="fas fa-paper-plane"></i>
+                </a>
+                <div class="mobile-nav-socials">
+                    <a href="https://github.com/arnabkashyap" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/arnab-kashyap-3a0bb936" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/arnabkashyapp" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main>
         <!-- Hero Section -->
@@ -55,18 +118,754 @@
                 <div class="orb orb-2"></div>
                 <div class="orb orb-3"></div>
             </div>
-            <div class="container hero-content">
-                <h2 class="reveal-text">Hello, I'm</h2>
-                <h1 class="reveal-text delay-1">Arnab <span class="gradient-text">Kashyap</span></h1>
-                <p class="reveal-text delay-2">Crafting digital experiences through elegant code and modern design.</p>
-                <div class="hero-btns reveal-text delay-3">
-                    <a href="#projects" class="btn primary-btn">View My Work</a>
-                    <a href="#contact" class="btn secondary-btn">Let's Talk</a>
+            <div class="container hero-container">
+                <div class="hero-grid">
+                    <!-- Left: Hero Text & Information -->
+                    <div class="hero-text-col">
+                        <div class="hero-badge reveal-text">
+                            <span class="badge-dot"></span>
+                            <span class="badge-label">Available for Opportunities</span>
+                            <span class="badge-separator">•</span>
+                            <span class="typed-text" id="typedText"></span><span class="type-cursor">|</span>
+                        </div>
+                        <p class="hero-greeting reveal-text delay-1">Hello, I'm</p>
+                        <h1 class="hero-name reveal-text delay-1">Arnab <span class="gradient-text">Kashyap</span></h1>
+                        
+                        <div class="hero-title-container reveal-text delay-2">
+                            <h2 class="hero-primary-title">Software Developer</h2>
+                        </div>
+
+                        <p class="hero-secondary-positioning reveal-text delay-2">
+                            Hackathon Builder <span class="bullet-accent">•</span> Problem Solver <span class="bullet-accent">•</span> AI &amp; Web Development Enthusiast
+                        </p>
+
+                        <p class="hero-description reveal-text delay-2">
+                            &ldquo;I build practical software solutions that turn real-world problems into scalable digital experiences using modern web technologies, AI, and full-stack development.&rdquo;
+                        </p>
+
+                        <!-- CTA Buttons -->
+                        <div class="hero-btns reveal-text delay-3">
+                            <a href="#projects" class="btn primary-btn hero-btn" id="heroBtnProjects">
+                                <i class="fas fa-folder-open"></i> View My Projects
+                            </a>
+                            <a href="#contact" class="btn secondary-btn hero-btn" id="heroBtnContact">
+                                <i class="fas fa-paper-plane"></i> Contact Me
+                            </a>
+                            <a href="assets/resume.pdf" class="btn resume-btn hero-btn" target="_blank" download id="heroBtnResume">
+                                <i class="fas fa-download"></i> Download CV
+                            </a>
+                        </div>
+
+                        <!-- Social Links Below CTA Buttons -->
+                        <div class="hero-socials-block reveal-text delay-3">
+                            <span class="hero-socials-title">Connect:</span>
+                            <div class="hero-social-icons">
+                                <a href="https://github.com/arnabkashyap" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="GitHub Profile">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/arnab-kashyap-3a0bb936" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="LinkedIn Profile">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://www.instagram.com/arnabkashyapp" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="Instagram Profile">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Two-Photo Visual Composition -->
+                    <div class="hero-media-col reveal-text delay-2">
+                        <div class="photo-composition">
+                            <!-- Ambient glowing blue/violet accents -->
+                            <div class="composition-glow"></div>
+                            <div class="composition-ring"></div>
+                            <div class="composition-dots-pattern"></div>
+
+                            <!-- Primary/Main Photo Card -->
+                            <div class="photo-card main-photo-card" id="mainPhotoCard">
+                                <div class="photo-frame">
+                                    <img src="assets/profile-1.jpg" alt="Arnab Kashyap - Software Developer" class="hero-photo-img main-img" loading="eager">
+                                    <div class="photo-glass-sheen"></div>
+                                </div>
+                                <div class="photo-pill-tag main-pill">
+                                    <span class="pill-dot"></span>
+                                    <span>Software Developer</span>
+                                </div>
+                            </div>
+
+                            <!-- Secondary Floating Photo Card -->
+                            <div class="photo-card secondary-photo-card" id="secondaryPhotoCard">
+                                <div class="photo-frame">
+                                    <img src="assets/profile-2.jpg" alt="Arnab Kashyap - Hackathon Builder" class="hero-photo-img secondary-img" loading="eager">
+                                    <div class="photo-glass-sheen"></div>
+                                </div>
+                                <div class="photo-pill-tag secondary-pill">
+                                    <i class="fas fa-code-branch"></i>
+                                    <span>Problem Solver</span>
+                                </div>
+                            </div>
+
+                            <!-- Floating Tech Badge -->
+                            <div class="floating-tech-badge">
+                                <i class="fas fa-bolt"></i>
+                                <span>AI &amp; Web Dev</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="scroll-indicator">
-                <div class="mouse"></div>
-                <span>Scroll Down</span>
+                <a href="#projects" aria-label="Scroll to Featured Projects section">
+                    <div class="mouse"></div>
+                    <span>Scroll Down</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section-padding">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="subtitle">Portfolio</span>
+                    <h2>Featured Projects</h2>
+                    <p class="section-subtitle">Selected projects focused on real-world problems, AI, web development, and intelligent systems.</p>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1: EcoLogix (Flagship) -->
+                    <div class="project-card flagship-card animate-up">
+                        <div class="project-card-header">
+                            <div class="project-badge flagship">
+                                <span class="badge-star"><i class="fas fa-star"></i></span>
+                                <span>Flagship Project</span>
+                            </div>
+                            <div class="project-header-links">
+                                <a href="https://github.com/arnabkashyap/EcoLogix" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="EcoLogix GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://eco-logix.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="EcoLogix Live Demo">
+                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">EcoLogix</h3>
+                            <p class="project-description">A sustainability-focused logistics and route intelligence platform designed to optimize transportation while considering efficiency and environmental impact.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>Vite</span>
+                                <span>FastAPI</span>
+                                <span>Python</span>
+                                <span>GIS</span>
+                                <span>Route Optimization</span>
+                                <span>Sustainability</span>
+                            </div>
+                        </div>
+                        <div class="project-card-footer">
+                            <a href="https://eco-logix.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project live-btn">
+                                <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/arnabkashyap/EcoLogix" target="_blank" rel="noopener noreferrer" class="btn-project code-btn">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Sentinel AI (Flagship) -->
+                    <div class="project-card flagship-card animate-up delay-1">
+                        <div class="project-card-header">
+                            <div class="project-badge flagship">
+                                <span class="badge-star"><i class="fas fa-star"></i></span>
+                                <span>Flagship Project</span>
+                            </div>
+                            <div class="project-header-links">
+                                <a href="https://github.com/arnabkashyap/Sentinel-AI" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Sentinel AI GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://sentinel-ai-three-psi-94.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Sentinel AI Live Demo">
+                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Sentinel AI</h3>
+                            <p class="project-description">An AI-powered crisis intelligence and decision-support platform that processes emergency information and helps transform reports into actionable response intelligence.</p>
+                            <div class="project-tags">
+                                <span>AI</span>
+                                <span>Multimodal AI</span>
+                                <span>Crisis Response</span>
+                                <span>Geolocation</span>
+                                <span>React</span>
+                                <span>Decision Support</span>
+                            </div>
+                        </div>
+                        <div class="project-card-footer">
+                            <a href="https://sentinel-ai-three-psi-94.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project live-btn">
+                                <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/arnabkashyap/Sentinel-AI" target="_blank" rel="noopener noreferrer" class="btn-project code-btn">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: CivicPulse 2.0 -->
+                    <div class="project-card animate-up delay-2">
+                        <div class="project-card-header">
+                            <div class="project-badge">
+                                <i class="fas fa-city"></i>
+                                <span>Civic Tech</span>
+                            </div>
+                            <div class="project-header-links">
+                                <a href="https://github.com/shivamshashwati6/CivicPulse2.0" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="CivicPulse 2.0 GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://civic-pulse2-0.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="CivicPulse 2.0 Live Demo">
+                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">CivicPulse 2.0</h3>
+                            <p class="project-description">An AI-powered civic intelligence platform designed to analyze citizen complaints, identify urban problem patterns, and support smarter authority decision-making.</p>
+                            <div class="project-tags">
+                                <span>AI</span>
+                                <span>React</span>
+                                <span>GIS</span>
+                                <span>Leaflet</span>
+                                <span>Civic Tech</span>
+                                <span>Data Intelligence</span>
+                            </div>
+                        </div>
+                        <div class="project-card-footer">
+                            <a href="https://civic-pulse2-0.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project live-btn">
+                                <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/shivamshashwati6/CivicPulse2.0" target="_blank" rel="noopener noreferrer" class="btn-project code-btn">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: OmniGuard -->
+                    <div class="project-card animate-up delay-3">
+                        <div class="project-card-header">
+                            <div class="project-badge">
+                                <i class="fas fa-satellite-dish"></i>
+                                <span>Real-Time Systems</span>
+                            </div>
+                            <div class="project-header-links">
+                                <a href="https://github.com/arnabkashyap/OmniGuard-backend-own" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="OmniGuard GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://omniguard-web.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="OmniGuard Live Demo">
+                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">OmniGuard</h3>
+                            <p class="project-description">A real-time crisis-management and tactical coordination platform combining AI, geospatial information, and live communication.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>WebSockets</span>
+                                <span>AI</span>
+                                <span>Geospatial Systems</span>
+                                <span>Crisis Management</span>
+                            </div>
+                        </div>
+                        <div class="project-card-footer">
+                            <a href="https://omniguard-web.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project live-btn">
+                                <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/arnabkashyap/OmniGuard-backend-own" target="_blank" rel="noopener noreferrer" class="btn-project code-btn">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Element Chess -->
+                    <div class="project-card animate-up">
+                        <div class="project-card-header">
+                            <div class="project-badge">
+                                <i class="fas fa-chess-knight"></i>
+                                <span>Game Development</span>
+                            </div>
+                            <div class="project-header-links">
+                                <a href="https://github.com/arnabkashyap/Chess-online" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Element Chess GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://chess-online-nine.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Element Chess Live Demo">
+                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Element Chess</h3>
+                            <p class="project-description">A strategic chess-inspired web game combining traditional gameplay with elemental abilities, tactical mechanics, and multiple game modes.</p>
+                            <div class="project-tags">
+                                <span>Next.js</span>
+                                <span>TypeScript</span>
+                                <span>Supabase</span>
+                                <span>Game Development</span>
+                                <span>Web Application</span>
+                            </div>
+                        </div>
+                        <div class="project-card-footer">
+                            <a href="https://chess-online-nine.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project live-btn">
+                                <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/arnabkashyap/Chess-online" target="_blank" rel="noopener noreferrer" class="btn-project code-btn">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: Heritage Threads -->
+                    <div class="project-card animate-up delay-1">
+                        <div class="project-card-header">
+                            <div class="project-badge">
+                                <i class="fas fa-landmark"></i>
+                                <span>Cultural Platform</span>
+                            </div>
+                            <div class="project-header-links">
+                                <a href="https://github.com/arnabkashyap/tourism" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Heritage Threads GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://tourism-topaz.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Heritage Threads Live Demo">
+                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Heritage Threads</h3>
+                            <p class="project-description">A digital platform focused on promoting cultural heritage, tourism, and community-driven experiences.</p>
+                            <div class="project-tags">
+                                <span>Next.js</span>
+                                <span>React</span>
+                                <span>Tourism</span>
+                                <span>Social Impact</span>
+                                <span>Cultural Platform</span>
+                            </div>
+                        </div>
+                        <div class="project-card-footer">
+                            <a href="https://tourism-topaz.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project live-btn">
+                                <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/arnabkashyap/tourism" target="_blank" rel="noopener noreferrer" class="btn-project code-btn">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects-cta animate-up">
+                    <a href="https://github.com/arnabkashyap" target="_blank" rel="noopener noreferrer" class="btn secondary-btn">
+                        <i class="fab fa-github"></i> View All Repositories on GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="skills section-padding">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="subtitle">Core Competencies</span>
+                    <h2>Technical Skills</h2>
+                    <p class="section-subtitle">A structured overview of programming languages, web frameworks, backend systems, intelligent solutions, and engineering tools.</p>
+                </div>
+                <div class="skills-grid">
+                    <!-- Category 1: PROGRAMMING -->
+                    <div class="skill-category-card animate-up" data-category="programming">
+                        <div class="skill-category-header">
+                            <div class="skill-cat-icon">
+                                <i class="fas fa-terminal"></i>
+                            </div>
+                            <div class="skill-cat-info">
+                                <h3>Programming</h3>
+                                <span class="skill-cat-tag">Languages &amp; Core</span>
+                            </div>
+                        </div>
+                        <div class="skill-items-list">
+                            <div class="skill-item">
+                                <i class="fas fa-code skill-icon"></i>
+                                <span class="skill-name">C</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-code-branch skill-icon"></i>
+                                <span class="skill-name">C++</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-java skill-icon"></i>
+                                <span class="skill-name">Java</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: WEB DEVELOPMENT -->
+                    <div class="skill-category-card animate-up delay-1" data-category="web">
+                        <div class="skill-category-header">
+                            <div class="skill-cat-icon">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <div class="skill-cat-info">
+                                <h3>Web Development</h3>
+                                <span class="skill-cat-tag">Frontend &amp; Frameworks</span>
+                            </div>
+                        </div>
+                        <div class="skill-items-list">
+                            <div class="skill-item">
+                                <i class="fab fa-html5 skill-icon"></i>
+                                <span class="skill-name">HTML</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-css3-alt skill-icon"></i>
+                                <span class="skill-name">CSS</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-js skill-icon"></i>
+                                <span class="skill-name">JavaScript</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-react skill-icon"></i>
+                                <span class="skill-name">React</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-bolt skill-icon"></i>
+                                <span class="skill-name">Next.js</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: BACKEND & DATABASE -->
+                    <div class="skill-category-card animate-up delay-2" data-category="backend">
+                        <div class="skill-category-header">
+                            <div class="skill-cat-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="skill-cat-info">
+                                <h3>Backend &amp; Database</h3>
+                                <span class="skill-cat-tag">APIs &amp; Storage</span>
+                            </div>
+                        </div>
+                        <div class="skill-items-list">
+                            <div class="skill-item">
+                                <i class="fab fa-node-js skill-icon"></i>
+                                <span class="skill-name">Node.js</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-network-wired skill-icon"></i>
+                                <span class="skill-name">Express.js</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-bolt-lightning skill-icon"></i>
+                                <span class="skill-name">FastAPI</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-database skill-icon"></i>
+                                <span class="skill-name">Databases</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 4: AI & INTELLIGENT SYSTEMS -->
+                    <div class="skill-category-card animate-up delay-1" data-category="ai">
+                        <div class="skill-category-header">
+                            <div class="skill-cat-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="skill-cat-info">
+                                <h3>AI &amp; Intelligent Systems</h3>
+                                <span class="skill-cat-tag">Models &amp; Integrations</span>
+                            </div>
+                        </div>
+                        <div class="skill-items-list">
+                            <div class="skill-item">
+                                <i class="fas fa-wand-magic-sparkles skill-icon"></i>
+                                <span class="skill-name">AI-powered applications</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-diagram-project skill-icon"></i>
+                                <span class="skill-name">Multimodal AI</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-robot skill-icon"></i>
+                                <span class="skill-name">AI integration</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-chart-line skill-icon"></i>
+                                <span class="skill-name">Decision-support systems</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 5: TOOLS & TECHNOLOGIES -->
+                    <div class="skill-category-card animate-up delay-2" data-category="tools">
+                        <div class="skill-category-header">
+                            <div class="skill-cat-icon">
+                                <i class="fas fa-toolbox"></i>
+                            </div>
+                            <div class="skill-cat-info">
+                                <h3>Tools &amp; Technologies</h3>
+                                <span class="skill-cat-tag">DevOps &amp; Geospatial</span>
+                            </div>
+                        </div>
+                        <div class="skill-items-list">
+                            <div class="skill-item">
+                                <i class="fab fa-git-alt skill-icon"></i>
+                                <span class="skill-name">Git</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-github skill-icon"></i>
+                                <span class="skill-name">GitHub</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-cloud-arrow-up skill-icon"></i>
+                                <span class="skill-name">REST APIs</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-plug skill-icon"></i>
+                                <span class="skill-name">WebSockets</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-map-location-dot skill-icon"></i>
+                                <span class="skill-name">Leaflet</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-earth-americas skill-icon"></i>
+                                <span class="skill-name">GIS / Geospatial technologies</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="achievements section-padding">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="subtitle">Recognition</span>
+                    <h2>Achievements &amp; Recognition</h2>
+                    <p class="section-subtitle">Proven problem-solving capabilities demonstrated through hackathons, ideathons, and active developer involvement.</p>
+                </div>
+                <div class="achievements-grid">
+                    <!-- Achievement 1: 2× Hackathon Winner -->
+                    <div class="achievement-card animate-up" data-type="winner">
+                        <div class="achievement-card-top">
+                            <div class="achievement-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <span class="achievement-badge">
+                                <i class="fas fa-award"></i> Winner
+                            </span>
+                        </div>
+                        <div class="achievement-body">
+                            <h3 class="achievement-title">2× Hackathon Winner</h3>
+                            <p class="achievement-desc">Built and presented software solutions under competitive hackathon conditions.</p>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 2: Ideathon Achievement -->
+                    <div class="achievement-card animate-up delay-1" data-type="ideathon">
+                        <div class="achievement-card-top">
+                            <div class="achievement-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <span class="achievement-badge">
+                                <i class="fas fa-certificate"></i> Recognition
+                            </span>
+                        </div>
+                        <div class="achievement-body">
+                            <h3 class="achievement-title">Ideathon Achievement</h3>
+                            <p class="achievement-desc">Recognized for innovative problem-solving and practical ideas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 3: National-Level Hackathon Participant -->
+                    <div class="achievement-card animate-up delay-2" data-type="national">
+                        <div class="achievement-card-top">
+                            <div class="achievement-icon">
+                                <i class="fas fa-flag-checkered"></i>
+                            </div>
+                            <span class="achievement-badge">
+                                <i class="fas fa-globe"></i> National Level
+                            </span>
+                        </div>
+                        <div class="achievement-body">
+                            <h3 class="achievement-title">National-Level Hackathon Participant</h3>
+                            <p class="achievement-desc">Gained experience competing and building solutions at the national level.</p>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 4: Active Developer Community Participant -->
+                    <div class="achievement-card animate-up delay-3" data-type="community">
+                        <div class="achievement-card-top">
+                            <div class="achievement-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <span class="achievement-badge">
+                                <i class="fas fa-handshake-angle"></i> Community
+                            </span>
+                        </div>
+                        <div class="achievement-body">
+                            <h3 class="achievement-title">Active Developer Community Participant</h3>
+                            <p class="achievement-desc">Regularly engaged in technical events, workshops, and developer learning communities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team & Collaborative Projects Section -->
+        <section id="team-projects" class="team-projects section-padding">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="subtitle">Collaboration</span>
+                    <h2>Team &amp; Collaborative Projects</h2>
+                    <p class="section-subtitle">Collaborative projects built through teamwork, experimentation, and practical problem solving.</p>
+                </div>
+                <div class="team-projects-grid">
+                    <!-- Team Project 1: Temp.io -->
+                    <div class="team-project-card animate-up">
+                        <div class="team-card-header">
+                            <span class="team-badge">
+                                <i class="fas fa-users"></i> Team Project
+                            </span>
+                            <div class="project-header-links">
+                                <a href="https://github.com/shivamshashwati6/temp.io2" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Temp.io GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://temp-io2.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Temp.io Live Demo">
+                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="team-card-body">
+                            <h3 class="team-project-title">Temp.io</h3>
+                            <p class="team-project-description">A weather intelligence platform providing real-time weather information, forecasting, alerts, location-based intelligence, and AI-assisted interaction.</p>
+                            <div class="team-tags">
+                                <span>React</span>
+                                <span>Vite</span>
+                                <span>FastAPI</span>
+                                <span>Python</span>
+                                <span>Weather APIs</span>
+                                <span>AI</span>
+                            </div>
+                        </div>
+                        <div class="team-card-footer">
+                            <a href="https://temp-io2.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-compact live-btn">
+                                <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/shivamshashwati6/temp.io2" target="_blank" rel="noopener noreferrer" class="btn-compact code-btn">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Team Project 2: My Safety App -->
+                    <div class="team-project-card animate-up delay-1">
+                        <div class="team-card-header">
+                            <span class="team-badge">
+                                <i class="fas fa-users"></i> Team Project
+                            </span>
+                            <div class="project-header-links">
+                                <a href="https://github.com/HyperPenetrator/My-Safety-App" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="My Safety App GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://my-safety-codecraft-v2.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="My Safety App Live Demo">
+                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="team-card-body">
+                            <h3 class="team-project-title">My Safety App</h3>
+                            <p class="team-project-description">A collaborative personal safety application designed to provide users with digital tools and features for emergency and personal safety situations.</p>
+                            <div class="team-tags">
+                                <span>Web Development</span>
+                                <span>Safety Technology</span>
+                                <span>Team Development</span>
+                            </div>
+                        </div>
+                        <div class="team-card-footer">
+                            <a href="https://my-safety-codecraft-v2.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-compact live-btn">
+                                <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/HyperPenetrator/My-Safety-App" target="_blank" rel="noopener noreferrer" class="btn-compact code-btn">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Team Project 3: Charak -->
+                    <div class="team-project-card animate-up delay-2">
+                        <div class="team-card-header">
+                            <span class="team-badge">
+                                <i class="fas fa-users"></i> Team Project
+                            </span>
+                            <div class="project-header-links">
+                                <a href="https://github.com/HyperPenetrator/Charak" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Charak GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://charak-web.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="Charak Live Demo">
+                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="team-card-body">
+                            <h3 class="team-project-title">Charak</h3>
+                            <p class="team-project-description">A collaborative healthcare technology platform focused on AI-assisted clinical history collection and improving digital healthcare workflows.</p>
+                            <div class="team-tags">
+                                <span>AI</span>
+                                <span>Healthcare Technology</span>
+                                <span>Web Development</span>
+                                <span>Clinical Platform</span>
+                            </div>
+                        </div>
+                        <div class="team-card-footer">
+                            <a href="https://charak-web.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-compact live-btn">
+                                <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/HyperPenetrator/Charak" target="_blank" rel="noopener noreferrer" class="btn-compact code-btn">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Team Project 4: PulseDesk -->
+                    <div class="team-project-card animate-up delay-3">
+                        <div class="team-card-header">
+                            <span class="team-badge">
+                                <i class="fas fa-users"></i> Team Project
+                            </span>
+                            <div class="project-header-links">
+                                <a href="https://github.com/HyperPenetrator/Pulse-Desk" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="PulseDesk GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://pulse-desk-ecru.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="PulseDesk Live Demo">
+                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="team-card-body">
+                            <h3 class="team-project-title">PulseDesk</h3>
+                            <p class="team-project-description">A collaborative software platform developed as a team project to solve practical problems using modern web technologies.</p>
+                            <div class="team-tags">
+                                <span>Web Development</span>
+                                <span>Team Collaboration</span>
+                                <span>Software Engineering</span>
+                            </div>
+                        </div>
+                        <div class="team-card-footer">
+                            <a href="https://pulse-desk-ecru.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-compact live-btn">
+                                <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/HyperPenetrator/Pulse-Desk" target="_blank" rel="noopener noreferrer" class="btn-compact code-btn">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -74,201 +873,81 @@
         <section id="about" class="about section-padding">
             <div class="container">
                 <div class="section-title">
-                    <span class="subtitle">Discovery</span>
+                    <span class="subtitle">Background</span>
                     <h2>About Me</h2>
                 </div>
                 <div class="about-grid">
+                    <!-- Left: About Text & Highlights -->
                     <div class="about-text animate-up">
-                        <p>I am a passionate developer with a keen eye for detail and a drive for creating intuitive,
-                            performant web applications. My journey in tech is fueled by curiosity and a desire to solve
-                            complex problems through creative solutions.</p>
-                        <p>With expertise across the full stack, I bridge the gap between aesthetics and functionality,
-                            ensuring every project not only looks stunning but performs flawlessly.</p>
-                        <div class="stats">
-                            <div class="stat-item">
-                                <span class="stat-num">5+</span>
-                                <span class="stat-label">Projects</span>
+                        <p>I'm a software developer and student at Gauhati University who enjoys turning real-world problems into practical software solutions. I learn by building, participating in hackathons, experimenting with emerging technologies, and contributing to developer communities.</p>
+                        <p>My experience includes web development, AI-powered applications, full-stack systems, geospatial applications, and software projects built around real-world use cases.</p>
+                        <p>I have won 2 hackathons, achieved recognition in an ideathon, and participated in national-level hackathons. I also actively participate in developer communities, technical events, workshops, and learning programs.</p>
+
+                        <!-- Compact Information Highlights -->
+                        <div class="about-highlights-grid">
+                            <div class="about-highlight-card">
+                                <div class="highlight-icon icon-edu"><i class="fas fa-graduation-cap"></i></div>
+                                <div class="highlight-text">
+                                    <span class="highlight-title">Gauhati University</span>
+                                    <span class="highlight-sub">Student &amp; Developer</span>
+                                </div>
                             </div>
-                            <div class="stat-item">
-                                <span class="stat-num">2+</span>
-                                <span class="stat-label">Years Exp</span>
+                            <div class="about-highlight-card">
+                                <div class="highlight-icon icon-trophy"><i class="fas fa-trophy"></i></div>
+                                <div class="highlight-text">
+                                    <span class="highlight-title">2× Hackathon Winner</span>
+                                    <span class="highlight-sub">Problem Solver</span>
+                                </div>
+                            </div>
+                            <div class="about-highlight-card">
+                                <div class="highlight-icon icon-idea"><i class="fas fa-lightbulb"></i></div>
+                                <div class="highlight-text">
+                                    <span class="highlight-title">Ideathon Achievement</span>
+                                    <span class="highlight-sub">Innovative Ideas</span>
+                                </div>
+                            </div>
+                            <div class="about-highlight-card">
+                                <div class="highlight-icon icon-flag"><i class="fas fa-flag-checkered"></i></div>
+                                <div class="highlight-text">
+                                    <span class="highlight-title">National-Level Hackathon</span>
+                                    <span class="highlight-sub">Participant</span>
+                                </div>
+                            </div>
+                            <div class="about-highlight-card">
+                                <div class="highlight-icon icon-community"><i class="fas fa-users"></i></div>
+                                <div class="highlight-text">
+                                    <span class="highlight-title">Developer Community</span>
+                                    <span class="highlight-sub">Active Participant</span>
+                                </div>
                             </div>
                         </div>
+
+                        <!-- Actions -->
+                        <div class="about-actions">
+                            <a href="assets/resume.pdf" class="btn primary-btn about-resume-btn" target="_blank" download>
+                                <i class="fas fa-file-arrow-down"></i> Download Resume
+                            </a>
+                            <a href="#contact" class="btn secondary-btn about-contact-btn">
+                                <i class="fas fa-paper-plane"></i> Get in Touch
+                            </a>
+                        </div>
                     </div>
+
+                    <!-- Right: Second Original Photograph -->
                     <div class="about-image animate-up delay-1">
-                        <div class="image-wrapper">
-                            <img src="assets/profile.png" alt="Arnab Kashyap" id="profile-img">
-                            <div class="image-overlay"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="skills section-padding">
-            <div class="container">
-                <div class="section-title text-center">
-                    <span class="subtitle">Expertise</span>
-                    <h2>My Tech Stack</h2>
-                </div>
-                <div class="skills-container">
-                    <div class="skill-card animate-up">
-                        <i class="fab fa-html5"></i>
-                        <h3>Frontend</h3>
-                        <p>HTML5, CSS3, JavaScript, React</p>
-                    </div>
-                    <div class="skill-card animate-up delay-1">
-                        <i class="fab fa-node-js"></i>
-                        <h3>Backend</h3>
-                        <p>Node.js, Express, MongoDB, SQL</p>
-                    </div>
-                    <div class="skill-card animate-up delay-2">
-                        <i class="fas fa-palette"></i>
-                        <h3>Design</h3>
-                        <p>UI/UX, Figma, Adobe XD</p>
-                    </div>
-                    <div class="skill-card animate-up delay-3">
-                        <i class="fas fa-tools"></i>
-                        <h3>Tools</h3>
-                        <p>Git, Docker, Firebase, AWS</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="projects section-padding">
-            <div class="container">
-                <div class="section-title">
-                    <span class="subtitle">Portfolio</span>
-                    <h2>Featured Projects</h2>
-                </div>
-                <div class="projects-grid">
-                    <!-- Project 1: Valentine Interactive -->
-                    <div class="project-card animate-up">
-                        <div class="project-img">
-                            <img src="assets/valentine.png" alt="Valentine Project">
-                            <div class="project-links">
-                                <a href="https://github.com/arnabkashyap/valentine2" target="_blank"><i
-                                        class="fab fa-github"></i></a>
-                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                        <div class="about-image-card">
+                            <div class="about-glow"></div>
+                            <div class="about-frame">
+                                <img src="assets/profile-2.jpg" alt="Arnab Kashyap - Software Developer" id="profile-img" class="about-photo-img" loading="lazy">
+                                <div class="about-glass-sheen"></div>
                             </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>For Deha ❤️</h3>
-                            <p>An interactive multimedia experience with synchronized audio, smooth transitions, and
-                                romantic aesthetics.</p>
-                            <div class="project-tags">
-                                <span>HTML</span>
-                                <span>Multimedia</span>
-                                <span>JS Sync</span>
+                            <div class="about-floating-badge">
+                                <span class="badge-status-dot"></span>
+                                <span>Software Developer &amp; Student</span>
                             </div>
-                        </div>
-                    </div>
-                    <!-- Project 2: Birthday 2.0 -->
-                    <div class="project-card animate-up delay-1">
-                        <div class="project-img">
-                            <img src="assets/birthday.png" alt="Birthday Project">
-                            <div class="project-links">
-                                <a href="https://github.com/arnabkashyap/birthday2.0" target="_blank"><i
-                                        class="fab fa-github"></i></a>
-                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Birthday 2.0</h3>
-                            <p>High-end digital celebration platform featuring personalized greetings and custom CSS
-                                animations.</p>
-                            <div class="project-tags">
-                                <span>HTML</span>
-                                <span>CSS Art</span>
-                                <span>Interactive</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project 3: Bodycount Checker -->
-                    <div class="project-card animate-up delay-2">
-                        <div class="project-img">
-                            <img src="assets/bodycount.png" alt="Body Count Checker">
-                            <div class="project-links">
-                                <a href="https://github.com/arnabkashyap/Bodycount2-website" target="_blank"><i
-                                        class="fab fa-github"></i></a>
-                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Bodycount Checker 🔥</h3>
-                            <p>A fun, high-energy interactive tool with real-time feedback and playful GIF animations.
-                            </p>
-                            <div class="project-tags">
-                                <span>JavaScript</span>
-                                <span>Fun UI</span>
-                                <span>Vibrant</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project 4: Test1 Lab -->
-                    <div class="project-card animate-up delay-3">
-                        <div class="project-img">
-                            <img src="assets/test1.png" alt="Test1 Project">
-                            <div class="project-links">
-                                <a href="https://github.com/arnabkashyap/test1" target="_blank"><i
-                                        class="fab fa-github"></i></a>
-                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Project Lab (Test1)</h3>
-                            <p>Experimental web modules and logic testing playground for modern frontend features.</p>
-                            <div class="project-tags">
-                                <span>JavaScript</span>
-                                <span>Experiment</span>
-                                <span>UI Lab</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project 5: Valentine V1 -->
-                    <div class="project-card animate-up">
-                        <div class="project-img">
-                            <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=2070&auto=format&fit=crop"
-                                alt="Valentine V1">
-                            <div class="project-links">
-                                <a href="https://github.com/arnabkashyap/valentine" target="_blank"><i
-                                        class="fab fa-github"></i></a>
-                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Valentine Classic</h3>
-                            <p>The original interactive greeting experience with CSS-based animations and heart particle
-                                effects.</p>
-                            <div class="project-tags">
-                                <span>CSS</span>
-                                <span>Particles</span>
-                                <span>Classic</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project 6: Nothing Site -->
-                    <div class="project-card animate-up delay-1">
-                        <div class="project-img">
-                            <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2070&auto=format&fit=crop"
-                                alt="Nothing">
-                            <div class="project-links">
-                                <a href="https://github.com/arnabkashyap/nothing" target="_blank"><i
-                                        class="fab fa-github"></i></a>
-                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Project "Nothing"</h3>
-                            <p>A minimalist, high-performance static site demonstrating core HTML optimization
-                                techniques.</p>
-                            <div class="project-tags">
-                                <span>HTML5</span>
-                                <span>Minimalist</span>
-                                <span>Speed</span>
+                            <div class="about-corner-badge">
+                                <i class="fas fa-laptop-code"></i>
+                                <span>Gauhati University</span>
                             </div>
                         </div>
                     </div>
@@ -280,45 +959,140 @@
         <section id="contact" class="contact section-padding">
             <div class="container">
                 <div class="section-title text-center">
-                    <span class="subtitle">Connection</span>
-                    <h2>Get In Touch</h2>
+                    <span class="subtitle">Get In Touch</span>
+                    <h2>Let's Build Something <span class="gradient-text">Meaningful</span></h2>
+                    <p class="contact-section-desc">
+                        Have a project idea, collaboration opportunity, hackathon discussion, or simply want to connect? Feel free to reach out.
+                    </p>
                 </div>
-                <div class="contact-wrapper">
-                    <div class="contact-info animate-up">
-                        <div class="info-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>arnabkumarkashyap2006@gmail.com</p>
+
+                <div class="availability-badge-wrap animate-up">
+                    <div class="availability-badge">
+                        <span class="availability-dot"></span>
+                        <span>Open to Internships, Hackathons &amp; Full-time Roles</span>
+                    </div>
+                </div>
+
+                <div class="contact-hub-wrapper">
+                    <!-- Prominent Contact Channels: Email & WhatsApp -->
+                    <div class="contact-primary-grid animate-up">
+                        <!-- Prominent Email Card -->
+                        <div class="contact-card email-highlight-card">
+                            <div class="card-glow email-glow"></div>
+                            <div class="contact-card-top">
+                                <div class="channel-badge direct-mail-badge">
+                                    <i class="fas fa-paper-plane"></i> Direct Mail
+                                </div>
+                                <div class="channel-icon-pill">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                            </div>
+                            <div class="contact-card-body">
+                                <h3 class="card-channel-title">Email</h3>
+                                <p class="card-channel-desc">Drop me a message for project collaborations, internships, or questions.</p>
+                                
+                                <div class="email-display-row">
+                                    <span class="email-address-text" id="emailAddressText">arnabkumarkashyap2006@gmail.com</span>
+                                    <button type="button" class="copy-email-btn" id="copyEmailBtn" aria-label="Copy email address" title="Copy to clipboard">
+                                        <i class="fas fa-copy"></i>
+                                        <span class="copy-btn-text">Copy</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="contact-card-footer">
+                                <a href="mailto:arnabkumarkashyap2006@gmail.com" class="btn primary-btn btn-action-prominent">
+                                    <span>Send Email</span>
+                                    <i class="fas fa-envelope-open-text"></i>
+                                </a>
                             </div>
                         </div>
-                        <div class="info-item">
-                            <i class="fas fa-location-dot"></i>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Assam, India</p>
+
+                        <!-- Prominent WhatsApp Card -->
+                        <div class="contact-card whatsapp-highlight-card">
+                            <div class="card-glow whatsapp-glow"></div>
+                            <div class="contact-card-top">
+                                <div class="channel-badge whatsapp-badge">
+                                    <i class="fab fa-whatsapp"></i> Instant Chat
+                                </div>
+                                <div class="channel-icon-pill whatsapp-icon-pill">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
                             </div>
-                        </div>
-                        <div class="social-links">
-                            <a href="https://github.com/arnabkashyap" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/arnab-kashyap-3a0bb9363" target="_blank"><i
-                                    class="fab fa-linkedin"></i></a>
-                            <a href="https://www.instagram.com/arnabkashyapp" target="_blank"><i
-                                    class="fab fa-instagram"></i></a>
+                            <div class="contact-card-body">
+                                <h3 class="card-channel-title">WhatsApp</h3>
+                                <p class="card-channel-desc">Fastest response for real-time discussions, project brainstorming, and hackathons.</p>
+                                
+                                <div class="whatsapp-status-row">
+                                    <span class="status-live-dot"></span>
+                                    <span class="status-live-text">Quick response &bull; Direct messaging</span>
+                                </div>
+                            </div>
+                            <div class="contact-card-footer">
+                                <a href="https://wa.me/919864351295" target="_blank" rel="noopener noreferrer" class="btn whatsapp-btn btn-action-prominent">
+                                    <span>Chat on WhatsApp</span>
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <form class="contact-form animate-up delay-1" id="contact-form">
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+
+                    <!-- Secondary Connect Bar: Socials & Location -->
+                    <div class="contact-social-bar animate-up delay-1">
+                        <div class="social-bar-header">
+                            <div class="social-bar-title-wrap">
+                                <span class="social-bar-subtitle">Find Me Online</span>
+                                <h4 class="social-bar-title">Connect &amp; Follow</h4>
+                            </div>
+                            <div class="location-indicator">
+                                <i class="fas fa-location-dot"></i>
+                                <span>Assam, India</span>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+
+                        <div class="social-cards-grid">
+                            <!-- GitHub Card -->
+                            <a href="https://github.com/arnabkashyap" target="_blank" rel="noopener noreferrer" class="social-link-card github-card" aria-label="GitHub Profile">
+                                <div class="social-card-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="social-card-text">
+                                    <span class="social-platform">GitHub</span>
+                                    <span class="social-handle">@arnabkashyap</span>
+                                </div>
+                                <div class="social-card-arrow">
+                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                </div>
+                            </a>
+
+                            <!-- LinkedIn Card -->
+                            <a href="https://www.linkedin.com/in/arnab-kashyap-3a0bb936" target="_blank" rel="noopener noreferrer" class="social-link-card linkedin-card" aria-label="LinkedIn Profile">
+                                <div class="social-card-icon">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </div>
+                                <div class="social-card-text">
+                                    <span class="social-platform">LinkedIn</span>
+                                    <span class="social-handle">Arnab Kashyap</span>
+                                </div>
+                                <div class="social-card-arrow">
+                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                </div>
+                            </a>
+
+                            <!-- Instagram Card -->
+                            <a href="https://www.instagram.com/arnabkashyapp" target="_blank" rel="noopener noreferrer" class="social-link-card instagram-card" aria-label="Instagram Profile">
+                                <div class="social-card-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <div class="social-card-text">
+                                    <span class="social-platform">Instagram</span>
+                                    <span class="social-handle">@arnabkashyapp</span>
+                                </div>
+                                <div class="social-card-arrow">
+                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                </div>
+                            </a>
                         </div>
-                        <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn primary-btn btn-block">Send Message</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </section>
@@ -327,17 +1101,16 @@
     <footer>
         <div class="container">
             <div class="footer-socials">
-                <a href="https://github.com/arnabkashyap" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/arnab-kashyap-3a0bb9363" target="_blank"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/arnabkashyapp" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/arnabkashyap" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/arnab-kashyap-3a0bb936" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/arnabkashyapp" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             </div>
-            <p>&copy; 2024 Arnab Kashyap. All rights reserved.</p>
+            <p>&copy; 2025 Arnab Kashyap. All rights reserved.</p>
             <p class="footer-note">Designed with ❤️ and Code</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=cinematic"></script>
 </body>
 
 </html>
